@@ -1,0 +1,13 @@
+# WorkBuddy 本地工作记忆（不入仓）
+.workbuddy/
+
+# macOS 系统垃圾
+.DS_Store
+
+# 临时与日志
+*.log
+*.tmp
+
+# 兜底防御：项目内不再含视频，但若误增则忽略
+*.mp4
+视频素材/
