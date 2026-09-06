@@ -1359,6 +1359,10 @@
       text-decoration: none;
       text-align: center;
       transition: opacity 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      line-height: inherit;
     }
     .service-link:hover {
       opacity: 0.88;

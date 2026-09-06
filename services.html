@@ -9,7 +9,7 @@
   <meta property="og:type" content="website" data-page-node-id="dSmqHgZObOHQSLagSX3HDZ">
   <meta property="og:title" content="服务清单 · 枝桠助眠" data-page-node-id="eFcchKKRGek9GG9PfJXMmn">
   <meta property="og:description" content="从一次呼吸，到一生的修习。四件事，陪你把日子过稳一点。" data-page-node-id="VhgrLpx90Zt7CWLOm0YjmW">
-  <meta property="og:image" content="https://zhiyazhumian-zhiyazhumian-d5gupxrnneb911975.webapps.tcloudbase.com/logo.png?v=2" data-page-node-id="TRaRVAv4JpiXM2cxykE87h">
+  <meta property="og:image" content="https://raw.giteeusercontent.com/zhiyazhumian/zhiyazhumian.gitee.io/raw/main/logo.png" data-page-node-id="TRaRVAv4JpiXM2cxykE87h">
   <meta property="og:image:width" content="350">
   <meta property="og:image:height" content="350">
   <meta property="og:url" content="./services.html" data-page-node-id="FmRAT7mQ0fXsuQF2bZWmCY">
@@ -206,10 +206,73 @@
       font-size: 14px;
       letter-spacing: 0.05em;
       transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
     }
     .service-link:hover {
       background: var(--beeswax);
       color: var(--night);
+    }
+    .qr-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .qr-modal.active {
+      display: flex;
+    }
+    .qr-modal-content {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 32px 28px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+    .qr-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: transparent;
+      font-size: 24px;
+      color: var(--gray);
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+    }
+    .qr-modal-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 22px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .qr-modal-sub {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 22px;
+    }
+    .qr-modal-img {
+      width: 240px;
+      height: 240px;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+      background: var(--bg-warm);
+      object-fit: contain;
+    }
+    body.qr-open {
+      overflow: hidden;
     }
     .schedule-section {
       padding: 100px 0;
@@ -414,7 +477,7 @@
             <p class="service-item-desc" data-page-node-id="Iiy7JIP4KmFmHhyuUomOXs">「开悟的楞严，成佛的法华」——《楞严经》是汉传佛教最重要的开悟经典之一。我们用 15 课时，每周一课，每课 2 小时，由禅修导师带班逐字讲解，配合 5 次线下共修，让你真正进入而非停留在听过。</p>
             <div class="service-item-price" data-page-node-id="eoZCEtBeuJ5Rj9GO5WpbSk">¥30,000 / 位</div>
             <p class="service-item-price-sub" data-page-node-id="A7ZahLR12fII684sS5tlnQ">15 课时 · 每课 2 小时 · 含 5 次线下共修</p>
-            <a class="service-link" href="./contact.html" data-page-node-id="NzsUg4X7VdwVmhEzEy6A1F">咨询报名</a>
+            <button type="button" class="service-link js-qr-trigger" data-qr-title="扫码咨询报名" data-page-node-id="NzsUg4X7VdwVmhEzEy6A1F">咨询报名</button>
           </div>
 
           <div class="service-item" data-page-node-id="4U6TkmxcJqNMCTrmUOAfwm">
@@ -422,7 +485,7 @@
             <p class="service-item-desc" data-page-node-id="1Xa6Pa5RvBcv821zZtU1Lx">覆盖儒家《四书五经》、道家《道德经》、释家《心经》《金刚经》《坛经》。54 课时，每周一课，两位导师交叉带班。从经文到现代工作生活的应用，到与自心的关系，帮你建立完整的东方经典坐标。</p>
             <div class="service-item-price" data-page-node-id="aIuQATbRPXF7JXgkkPTBVi">¥60,000 / 位</div>
             <p class="service-item-price-sub" data-page-node-id="YtK2U4YBRg9rIMfG6UtBZz">54 课时 · 每课 2 小时 · 含 12 次线下共修</p>
-            <a class="service-link" href="./contact.html" data-page-node-id="bfeL5GGdEaMmD9MJb7RKZk">咨询报名</a>
+            <button type="button" class="service-link js-qr-trigger" data-qr-title="扫码咨询报名" data-page-node-id="bfeL5GGdEaMmD9MJb7RKZk">咨询报名</button>
           </div>
 
           <div class="service-item" data-page-node-id="rxHRcQClTG4aVP566HClea">
@@ -444,7 +507,7 @@
             <div class="service-item-price" data-page-node-id="p2tUZzl0Ehx3R1GtJFbPLS">¥3,000 / 小时</div>
             <p class="service-item-price-sub" data-page-node-id="2qBnl5b8Y9gP9YHxzuopK0">2 小时起约 · 线上或线下 · 可单次或预约周期</p>
             <p class="service-item-desc service-note" data-page-node-id="ZyXYIErEfh2LccEUGLYoBV">报名个案调频即赠送 <strong data-page-node-id="qGp5ZFNMxYbGsvG3HNoJgG">1 个月每日打卡训练</strong>。</p>
-            <a class="service-link" href="./contact.html" data-page-node-id="lWOEiloy3BzJ1rYEMVwXgE">预约调频</a>
+            <button type="button" class="service-link js-qr-trigger" data-qr-title="扫码预约调频" data-page-node-id="lWOEiloy3BzJ1rYEMVwXgE">预约调频</button>
           </div>
 
           <div class="service-item" data-page-node-id="hVM8a0wAbZR4PXJ6IiU7zI">
@@ -458,7 +521,7 @@
         <div class="service-detail-head" data-page-node-id="EZgVY0kALjUFXHPtWmKONy">
           <div class="cat-no" data-page-node-id="BSvqSIbEqNS9p5pCMNR8SV">第四类 / CATEGORY IV</div>
           <div class="cat-name" data-page-node-id="GKLjtYMIGXI9oH7xAbyWM3">助眠</div>
-          <p class="cat-tagline" data-page-node-id="KG607yGTjFTT0gTGFQIZ8S">佛珠不是配饰，是手腕上的暂停键。108 念珠会员，终身无限次免费换新。</p>
+          <p class="cat-tagline" data-page-node-id="KG607yGTjFTT0gTGFQIZ8S">念珠不是配饰，是手腕上的暂停键。108 念珠会员，终身无限次免费换新。</p>
         </div>
         <div class="service-detail-body" data-page-node-id="aShEjyxf19mmxdK1QJIz4C">
           <div class="service-item" data-page-node-id="zFWhFygHVvkoEJEeDQkmhy">
@@ -466,7 +529,7 @@
             <p class="service-item-desc" data-page-node-id="tdGnEG8fa8NKwaMClkbKsg">一次性缴纳入会费，即享一年内无限次免费更换 108 念珠服务。所有念珠均为天然材质、手工穿制，涵盖 12 款主材质与 6 款隔珠搭配。会员期满后续享半价续费。</p>
             <div class="service-item-price" data-page-node-id="gKpaYzd8OiiTQbpQOLlhkY">¥4,999 / 年</div>
             <p class="service-item-price-sub" data-page-node-id="SrUKPgTfaBR5zJK8JN7FTh">无限次免费更换 108 念珠 · 含保修、缠线、终身售后</p>
-            <a class="service-link" href="https://www.workbuddy.link/p/G6Ye5hKTjj5MSxMisSkU76" target="_blank" rel="noopener" data-page-node-id="xwkJEKoW2a9ML1I83kkpLJ">在此选择 · 开通会员</a>
+            <button type="button" class="service-link js-qr-trigger" data-qr-title="扫码加入 108 念珠会员" data-page-node-id="xwkJEKoW2a9ML1I83kkpLJ">在此选择 · 开通会员</button>
           </div>
 
           <div class="service-item" data-page-node-id="ms4RXk5q7fPnPctHoI7rIS">
@@ -594,7 +657,7 @@
           <ul class="footer-contact" data-page-node-id="KRwGMwSCTuSFKmwBickTzs">
             <li data-page-node-id="hWGCGRK0RzylKV8tURFiGk">微信：Huang-ShenGang</li>
             <li data-page-node-id="kFxflLgtJAUw4vsnOUGvyd">邮箱：448490701@qq.com</li>
-            <li data-page-node-id="1eFmuTVI6RydYZDBZLwWe6">电话：18969107719</li>
+            <li data-page-node-id="1eFmuTVI6RydYZDBZLwWe6">电话：13868109256</li>
             <li data-page-node-id="RTljri0GSL4fCPrE0nWgfE">地址：<a href="./contact.html" data-page-node-id="ZRAIq2uKwpzGMBL5mpU9KZ">查看详情</a></li>
           </ul>
         </div>
@@ -621,6 +684,15 @@
       </div>
     </div>
   </footer>
+
+  <div class="qr-modal" id="qrModal" aria-hidden="true">
+    <div class="qr-modal-content" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle">
+      <button type="button" class="qr-modal-close" id="qrModalClose" aria-label="关闭">×</button>
+      <div class="qr-modal-title" id="qrModalTitle">扫码联系客服</div>
+      <div class="qr-modal-sub">使用微信扫一扫，添加客服</div>
+      <img src="./二维码.jpg" alt="枝桠助眠微信二维码" class="qr-modal-img">
+    </div>
+  </div>
 
   <script>
     (function(){
@@ -660,6 +732,37 @@
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         obs.observe(el);
+      });
+
+      // QR modal
+      var qrModal = document.getElementById('qrModal');
+      var qrModalTitle = document.getElementById('qrModalTitle');
+      var qrModalClose = document.getElementById('qrModalClose');
+      function openQr(title) {
+        if (!qrModal) return;
+        qrModalTitle.textContent = title || '扫码联系客服';
+        qrModal.classList.add('active');
+        qrModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('qr-open');
+      }
+      function closeQr() {
+        if (!qrModal) return;
+        qrModal.classList.remove('active');
+        qrModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('qr-open');
+      }
+      document.querySelectorAll('.js-qr-trigger').forEach(function(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          openQr(btn.dataset.qrTitle);
+        });
+      });
+      if (qrModalClose) qrModalClose.addEventListener('click', closeQr);
+      if (qrModal) qrModal.addEventListener('click', function(e){
+        if (e.target === qrModal) closeQr();
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') closeQr();
       });
     })();
   </script>
