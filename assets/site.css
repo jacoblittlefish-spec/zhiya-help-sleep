@@ -1409,6 +1409,8 @@
       letter-spacing: 0.05em;
     }
     .nav-brand span { color: var(--beeswax); }
+    .nav-brand { display: inline-flex; align-items: center; }
+    .nav-logo { height: 26px; width: auto; margin-right: 8px; }
     .nav-links {
       display: flex;
       align-items: center;
