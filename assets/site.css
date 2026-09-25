@@ -412,6 +412,12 @@
       will-change: transform;
     }
 
+    /* 隐藏的产品/请购卡：不显示、不参与布局 */
+    .product-card[hidden],
+    .purchase-card[hidden] {
+      display: none !important;
+    }
+
     .product-card {
       flex: 0 0 100%;
       max-width: 100%;
