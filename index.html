@@ -1231,7 +1231,7 @@
       if (e.target === modal) closeModal();
     });
 
-    document.querySelectorAll('.product-btn, .product-card').forEach(el => {
+    document.querySelectorAll('.product-btn').forEach(el => {
       el.addEventListener('click', (e) => {
         if (sliderSwiped) {
           sliderSwiped = false;
