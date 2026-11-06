@@ -1387,6 +1387,25 @@
       color: var(--green);
       margin-bottom: 0;
     }
+    .service-item-desc.desc-hang {
+      padding-left: 2em;
+    }
+    .service-item-idx {
+      color: #000000;
+      font-weight: 700;
+      display: inline-block;
+      width: 2em;
+      margin-left: -2em;
+    }
+    .service-item-desc b {
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .service-item-desc b.service-price {
+      font-family: 'Noto Serif SC', serif;
+      color: var(--beeswax);
+      font-size: 15px;
+    }
     @media (max-width: 900px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
     }
